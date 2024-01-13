@@ -271,6 +271,18 @@ chmod +x $HOME/../usr/bin/kill_termux_x11
 # setup_theme() {
 # }
 
+configure_xfce() {
+  prun sudo apt-get install -y greybird-gtk-theme breeze-cursor-theme
+  prun cp -r /usr/share/themes/Greybird /data/data/com.termux/files/usr/share/themes/
+  prun cp -r /usr/share/themes/Greybird-dark /data/data/com.termux/files/usr/share/themes/
+
+  prun cp -r /usr/share/icons/breeze_cursors/ /data/data/com.termux/files/usr/share/icons/
+
+  git clone https://github.com/milikhin/Termux_XFCE.git
+  cp -r Termux_XFCE/files/xfce4 ./config
+  rm -r Termux_XFCE
+}
+
 setup_proot
 setup_xfce
 setup_termux_x11
@@ -279,6 +291,8 @@ setup_termux_x11
 rm setup.sh
 source .bashrc
 termux-reload-settings
+
+configure_xfce
 
 ########
 ##Finish ##
