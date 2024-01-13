@@ -279,8 +279,8 @@ configure_xfce() {
   prun cp -r /usr/share/icons/breeze_cursors/ /data/data/com.termux/files/usr/share/icons/
 
   git clone https://github.com/milikhin/Termux_XFCE.git
-  cp -r Termux_XFCE/files/xfce4 ./config
-  rm -r Termux_XFCE
+  cp -r Termux_XFCE/files/xfce4 ./.config
+  cp -r Termux_XFCE/files/dconf ./.config
 }
 
 setup_proot

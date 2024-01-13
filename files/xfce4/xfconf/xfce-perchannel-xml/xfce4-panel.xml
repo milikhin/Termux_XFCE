@@ -30,7 +30,6 @@
     <property name="plugin-1" type="string" value="applicationsmenu"/>
     <property name="plugin-2" type="string" value="tasklist">
       <property name="grouping" type="uint" value="1"/>
-      <property name="flat-buttons" type="bool" value="true"/>
     </property>
     <property name="plugin-3" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
@@ -52,15 +51,15 @@
     </property>
     <property name="plugin-12" type="string" value="clock">
       <property name="digital-layout" type="uint" value="3"/>
+      <property name="digital-time-font" type="string" value="Sans 10"/>
       <property name="digital-time-format" type="string" value="%a %b %d %T"/>
-      <property name="digital-time-font" type="string" value="Sans 11"/>
     </property>
     <property name="plugin-13" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-7" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="17051421916.desktop"/>
+        <value type="string" value="17051526425.desktop"/>
       </property>
     </property>
   </property>
