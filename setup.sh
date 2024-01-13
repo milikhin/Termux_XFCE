@@ -268,14 +268,13 @@ EOF
 chmod +x $HOME/../usr/bin/kill_termux_x11
 }
 
-setup_theme() {
-
-}
+# setup_theme() {
+# }
 
 setup_proot
 setup_xfce
 setup_termux_x11
-setup_theme
+# setup_theme
 
 rm setup.sh
 source .bashrc
