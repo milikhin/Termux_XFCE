@@ -53,7 +53,9 @@ The full hardware acceleration command would be ```GALLIUM_DRIVER=virvpipe MESA_
     
 To enter proot use the command ```debian```, from there you can install aditional software with apt and use cp2menu in termux to copy the menu items over to termux xfce menu. 
 
-Nala has been chosen as a front end in Debian proot. As it is currently setup, you do not need to issue sudo prior to running apt. This allows for you to just run apt update, apt upgrade, etc without also using sudo. This is setup similar in Termux as well and works just the same.
+As it is currently setup, you do not need to issue sudo prior to running apt. This allows for you to just run apt update, apt upgrade, etc without also using sudo. This is setup similar in Termux as well and works just the same.
+
+Use ```MESA_LOADER_DRIVER_OVERRIDE=zink ...``` to use ```zink``` for better hardware acceleration.
 
 &nbsp;
 
