@@ -6,13 +6,13 @@
     <value type="int" value="1"/>
     <property name="dark-mode" type="bool" value="true"/>
     <property name="panel-1" type="empty">
-      <property name="position" type="string" value="p=6;x=0;y=0"/>
+      <property name="position" type="string" value="p=8;x=740;y=910"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="icon-size" type="uint" value="16"/>
-      <property name="size" type="uint" value="26"/>
+      <property name="icon-size" type="uint" value="20"/>
+      <property name="size" type="uint" value="32"/>
       <property name="plugin-ids" type="array">
-        <value type="int" value="1"/>
+        <value type="int" value="8"/>
         <value type="int" value="2"/>
         <value type="int" value="3"/>
         <value type="int" value="4"/>
@@ -24,10 +24,16 @@
         <value type="int" value="13"/>
         <value type="int" value="7"/>
       </property>
+      <property name="background-style" type="uint" value="1"/>
+      <property name="background-rgba" type="array">
+        <value type="double" value="0"/>
+        <value type="double" value="0"/>
+        <value type="double" value="0"/>
+        <value type="double" value="0"/>
+      </property>
     </property>
   </property>
   <property name="plugins" type="empty">
-    <property name="plugin-1" type="string" value="applicationsmenu"/>
     <property name="plugin-2" type="string" value="tasklist">
       <property name="grouping" type="uint" value="1"/>
     </property>
@@ -44,6 +50,9 @@
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="onboard"/>
+      </property>
     </property>
     <property name="plugin-10" type="string" value="notification-plugin"/>
     <property name="plugin-11" type="string" value="separator">
@@ -60,6 +69,33 @@
     <property name="plugin-7" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="17051526425.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-8" type="string" value="whiskermenu">
+      <property name="profile-shape" type="int" value="2"/>
+      <property name="button-title" type="string" value=" Applications "/>
+      <property name="show-button-icon" type="bool" value="false"/>
+      <property name="show-button-title" type="bool" value="true"/>
+      <property name="show-command-logout" type="bool" value="false"/>
+      <property name="command-logout" type="string" value="xfce4-session-logout --logout"/>
+      <property name="show-command-menueditor" type="bool" value="false"/>
+      <property name="show-command-profile" type="bool" value="false"/>
+      <property name="show-command-lockscreen" type="bool" value="false"/>
+      <property name="show-command-settings" type="bool" value="false"/>
+      <property name="position-profile-alternate" type="bool" value="false"/>
+      <property name="show-command-logoutuser" type="bool" value="true"/>
+      <property name="command-logoutuser" type="string" value="/data/data/com.termux/files/usr/bin/kill_termux_x11"/>
+      <property name="favorites" type="array">
+        <value type="string" value="firefox.desktop"/>
+        <value type="string" value="chromium.desktop"/>
+        <value type="string" value="xfce4-mail-reader.desktop"/>
+        <value type="string" value="xfce4-file-manager.desktop"/>
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+      </property>
+      <property name="position-search-alternate" type="bool" value="true"/>
+      <property name="recent" type="array">
+        <value type="string" value="chromium.desktop"/>
+        <value type="string" value="App-Installer.desktop"/>
       </property>
     </property>
   </property>
