@@ -163,26 +163,6 @@ StartupNotify=false
 chmod +x $HOME/Desktop/cp2menu.desktop
 mv $HOME/Desktop/cp2menu.desktop $HOME/../usr/share/applications
 
-#App Installer Utility
-git clone https://github.com/phoenixbyrd/App-Installer.git
-mv $HOME/App-Installer $HOME/.App-Installer
-chmod +x $HOME/.App-Installer/*
-
-echo "[Desktop Entry]
-Version=1.0
-Type=Application
-Name=App Installer
-Comment=
-Exec=/data/data/com.termux/files/home/.App-Installer/app-installer
-Icon=package-install
-Categories=System;
-Path=
-Terminal=false
-StartupNotify=false
-" > $HOME/Desktop/App-Installer.desktop
-chmod +x $HOME/Desktop/App-Installer.desktop
-cp $HOME/Desktop/App-Installer.desktop $HOME/../usr/share/applications
-
 }
 
 setup_termux_x11() {
