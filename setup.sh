@@ -57,8 +57,6 @@ echo "export DISPLAY=:1.0" >> $HOME/../usr/var/lib/proot-distro/installed-rootfs
 #Set proot aliases
 echo "
 alias virgl='GALLIUM_DRIVER=virpipe '
-alias ls='exa -lF --icons'
-alias cat='bat '
 alias start='echo "please run from termux, not debian proot."'
 " >> $HOME/../usr/var/lib/proot-distro/installed-rootfs/debian/home/$username/.bashrc
 
@@ -87,14 +85,12 @@ source .sound" >> .bashrc
 #Set aliases
 echo "
 alias debian='proot-distro login debian --user $username --shared-tmp'
-alias ls='exa -lF --icons'
-alias cat='bat '
 " >> $HOME/.bashrc
 
 cat <<'EOF' > ../usr/bin/prun
 #!/bin/bash
 varname=$(basename $HOME/../usr/var/lib/proot-distro/installed-rootfs/debian/home/*)
-proot-distro login debian --user $varname --shared-tmp -- env DISPLAY=:1.0 $@
+proot-distro login debian --user $varname --shared-tmp -- env DISPLAY=:1.0 env GALLIUM_DRIVER=virpipe $@
 
 EOF
 chmod +x ../usr/bin/prun
@@ -167,12 +163,7 @@ mv $HOME/Desktop/cp2menu.desktop $HOME/../usr/share/applications
 
 setup_termux_x11() {
 # Install Termux-X11
-sed -i '12s/^#//' $HOME/.termux/termux.properties
-
-wget https://github.com/milikhin/Termux_XFCE/raw/main/termux-x11.deb
-dpkg -i termux-x11.deb
-rm termux-x11.deb
-apt-mark hold termux-x11-nightly
+pkg in termux-x11-nightly
 
 wget https://github.com/milikhin/Termux_XFCE/raw/main/termux-x11.apk
 mv termux-x11.apk $HOME/storage/downloads/
